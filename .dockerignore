@@ -1,0 +1,9 @@
+node_modules
+build
+storybook-static
+coverage
+.git
+.vscode
+.env
+.env.*
+*.log

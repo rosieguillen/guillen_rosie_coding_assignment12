@@ -1,0 +1,9 @@
+
+import type { HTMLAttributes } from "react";
+
+export interface TextProps
+    extends HTMLAttributes<HTMLParagraphElement> {
+    text: string;
+    backgroundColor?: string;
+    disabled?: boolean;
+}
