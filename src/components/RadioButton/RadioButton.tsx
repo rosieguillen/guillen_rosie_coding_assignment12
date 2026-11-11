@@ -1,7 +1,5 @@
-
-
-import styled from "styled-components";
-import type { RadioButtonProps } from "./RadioButton.types";
+import styled from 'styled-components';
+import type { RadioButtonProps } from './RadioButton.types';
 
 const Wrapper = styled.label<{
   $backgroundColor: string;
@@ -18,13 +16,11 @@ const Wrapper = styled.label<{
   overflow-wrap: anywhere;
 
   background-color: ${({ $disabled, $backgroundColor }) =>
-    $disabled ? "#d1d5db" : $backgroundColor};
+    $disabled ? '#d1d5db' : $backgroundColor};
 
-  color: ${({ $disabled }) =>
-    $disabled ? "#4b5563" : "#111827"};
+  color: ${({ $disabled }) => ($disabled ? '#4b5563' : '#111827')};
 
-  cursor: ${({ $disabled }) =>
-    $disabled ? "not-allowed" : "pointer"};
+  cursor: ${({ $disabled }) => ($disabled ? 'not-allowed' : 'pointer')};
 
   @media (max-width: 480px) {
     width: 100%;
@@ -47,14 +43,11 @@ const Input = styled.input`
 
 export const RadioButton = ({
   label,
-  backgroundColor = "#ffffff",
+  backgroundColor = '#ffffff',
   disabled = false,
   ...props
 }: RadioButtonProps) => (
-  <Wrapper
-    $backgroundColor={backgroundColor}
-    $disabled={disabled}
-  >
+  <Wrapper $backgroundColor={backgroundColor} $disabled={disabled}>
     <Input {...props} type="radio" disabled={disabled} />
     <span>{label}</span>
   </Wrapper>

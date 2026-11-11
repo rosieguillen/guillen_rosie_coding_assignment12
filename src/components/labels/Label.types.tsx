@@ -1,9 +1,7 @@
+import type { LabelHTMLAttributes } from 'react';
 
-import type { LabelHTMLAttributes } from "react";
-
-export interface LabelProps
-    extends LabelHTMLAttributes<HTMLLabelElement> {
-    text: string;
-    backgroundColor?: string;
-    disabled?: boolean;
+export interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
+  text: string;
+  backgroundColor?: string;
+  disabled?: boolean;
 }

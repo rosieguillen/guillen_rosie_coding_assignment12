@@ -1,18 +1,17 @@
-
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { Table } from "./Table";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { Table } from './Table';
 
 const meta = {
-  title: "Components/Table",
+  title: 'Components/Table',
   component: Table,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
-    backgroundColor: { control: "color" },
-    disabled: { control: "boolean" },
+    backgroundColor: { control: 'color' },
+    disabled: { control: 'boolean' },
     children: { control: false },
   },
   args: {
-    backgroundColor: "#ffffff",
+    backgroundColor: '#ffffff',
     disabled: false,
   },
   render: (args) => (

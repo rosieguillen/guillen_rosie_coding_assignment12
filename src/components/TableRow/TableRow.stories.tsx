@@ -1,23 +1,21 @@
-
-
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { TableRow } from "./TableRow";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { TableRow } from './TableRow';
 
 const meta = {
-  title: "Components/TableRow",
+  title: 'Components/TableRow',
   component: TableRow,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
-    backgroundColor: { control: "color" },
-    disabled: { control: "boolean" },
+    backgroundColor: { control: 'color' },
+    disabled: { control: 'boolean' },
     children: { control: false },
   },
   args: {
-    backgroundColor: "#ffffff",
+    backgroundColor: '#ffffff',
     disabled: false,
   },
   render: (args) => (
-    <table style={{ width: "100%", borderCollapse: "collapse" }}>
+    <table style={{ width: '100%', borderCollapse: 'collapse' }}>
       <thead>
         <tr>
           <th scope="col">Component</th>

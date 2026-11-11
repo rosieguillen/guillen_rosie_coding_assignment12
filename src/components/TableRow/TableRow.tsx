@@ -1,19 +1,17 @@
-import styled from "styled-components";
-import type { TableRowProps } from "./TableRow.types";
-import type { MouseEvent } from "react";
+import styled from 'styled-components';
+import type { TableRowProps } from './TableRow.types';
+import type { MouseEvent } from 'react';
 
 const StyledRow = styled.tr<{
   $backgroundColor: string;
   $disabled: boolean;
 }>`
   background-color: ${({ $disabled, $backgroundColor }) =>
-    $disabled ? "#d1d5db" : $backgroundColor};
+    $disabled ? '#d1d5db' : $backgroundColor};
 
-  color: ${({ $disabled }) =>
-    $disabled ? "#4b5563" : "inherit"};
+  color: ${({ $disabled }) => ($disabled ? '#4b5563' : 'inherit')};
 
-  cursor: ${({ $disabled }) =>
-    $disabled ? "not-allowed" : "inherit"};
+  cursor: ${({ $disabled }) => ($disabled ? 'not-allowed' : 'inherit')};
 
   td,
   th {
@@ -32,7 +30,7 @@ const StyledRow = styled.tr<{
 
 export const TableRow = ({
   children,
-  backgroundColor = "transparent",
+  backgroundColor = 'transparent',
   disabled = false,
   onClick,
   onClickCapture,

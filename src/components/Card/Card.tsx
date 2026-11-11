@@ -1,9 +1,6 @@
-
-
-import styled from "styled-components";
-import type { CardProps } from "./Card.types";
-import type { MouseEvent } from "react";
-
+import styled from 'styled-components';
+import type { CardProps } from './Card.types';
+import type { MouseEvent } from 'react';
 
 const Container = styled.article<{
   $backgroundColor: string;
@@ -19,13 +16,11 @@ const Container = styled.article<{
   overflow-wrap: anywhere;
 
   background-color: ${({ $disabled, $backgroundColor }) =>
-    $disabled ? "#d1d5db" : $backgroundColor};
+    $disabled ? '#d1d5db' : $backgroundColor};
 
-  color: ${({ $disabled }) =>
-    $disabled ? "#4b5563" : "#111827"};
+  color: ${({ $disabled }) => ($disabled ? '#4b5563' : '#111827')};
 
-  cursor: ${({ $disabled }) =>
-    $disabled ? "not-allowed" : "auto"};
+  cursor: ${({ $disabled }) => ($disabled ? 'not-allowed' : 'auto')};
 
   @media (max-width: 480px) {
     padding: 16px;
@@ -47,7 +42,7 @@ const Description = styled.p`
 export const Card = ({
   heading,
   description,
-  backgroundColor = "#ffffff",
+  backgroundColor = '#ffffff',
   disabled = false,
   onClick,
   ...props

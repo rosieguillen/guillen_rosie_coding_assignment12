@@ -1,10 +1,8 @@
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { TableCell } from './TableCell';
 
-
-import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import { TableCell } from "./TableCell";
-
-test("the table cell is visible", () => {
+test('the table cell is visible', () => {
   render(
     <table>
       <tbody>
@@ -12,30 +10,26 @@ test("the table cell is visible", () => {
           <TableCell>Button</TableCell>
         </tr>
       </tbody>
-    </table>
+    </table>,
   );
 
-  expect(
-    screen.getByRole("cell", { name: "Button" })
-  ).toBeVisible();
+  expect(screen.getByRole('cell', { name: 'Button' })).toBeVisible();
 });
 
-test("the background changes when disabled", () => {
+test('the background changes when disabled', () => {
   const { rerender } = render(
     <table>
       <tbody>
         <tr>
-          <TableCell backgroundColor="#ffffff">
-            Button
-          </TableCell>
+          <TableCell backgroundColor="#ffffff">Button</TableCell>
         </tr>
       </tbody>
-    </table>
+    </table>,
   );
 
-  const cell = screen.getByRole("cell");
+  const cell = screen.getByRole('cell');
 
-  expect(cell).toHaveStyle("background-color: #ffffff");
+  expect(cell).toHaveStyle('background-color: #ffffff');
 
   rerender(
     <table>
@@ -46,14 +40,14 @@ test("the background changes when disabled", () => {
           </TableCell>
         </tr>
       </tbody>
-    </table>
+    </table>,
   );
 
-  expect(cell).toHaveAttribute("aria-disabled", "true");
-  expect(cell).toHaveStyle("background-color: #d1d5db");
+  expect(cell).toHaveAttribute('aria-disabled', 'true');
+  expect(cell).toHaveStyle('background-color: #d1d5db');
 });
 
-test("the header option creates a column header", () => {
+test('the header option creates a column header', () => {
   render(
     <table>
       <thead>
@@ -61,10 +55,10 @@ test("the header option creates a column header", () => {
           <TableCell header>Component</TableCell>
         </tr>
       </thead>
-    </table>
+    </table>,
   );
 
   expect(
-    screen.getByRole("columnheader", { name: "Component" })
-  ).toHaveAttribute("scope", "col");
+    screen.getByRole('columnheader', { name: 'Component' }),
+  ).toHaveAttribute('scope', 'col');
 });

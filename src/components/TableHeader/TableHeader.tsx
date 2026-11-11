@@ -1,23 +1,20 @@
-
-import styled from "styled-components";
-import type { TableHeaderProps } from "./TableHeader.types";
-import type { MouseEvent } from "react";
+import styled from 'styled-components';
+import type { TableHeaderProps } from './TableHeader.types';
+import type { MouseEvent } from 'react';
 
 const StyledHeader = styled.thead<{
   $backgroundColor: string;
   $disabled: boolean;
 }>`
   background-color: ${({ $disabled, $backgroundColor }) =>
-    $disabled ? "#d1d5db" : $backgroundColor};
+    $disabled ? '#d1d5db' : $backgroundColor};
 
-  color: ${({ $disabled }) =>
-    $disabled ? "#4b5563" : "#111827"};
+  color: ${({ $disabled }) => ($disabled ? '#4b5563' : '#111827')};
 
   font-family: inherit;
   font-weight: 700;
 
-  cursor: ${({ $disabled }) =>
-    $disabled ? "not-allowed" : "auto"};
+  cursor: ${({ $disabled }) => ($disabled ? 'not-allowed' : 'auto')};
 
   th {
     padding: 12px;
@@ -35,7 +32,7 @@ const StyledHeader = styled.thead<{
 
 export const TableHeader = ({
   children,
-  backgroundColor = "#dbeafe",
+  backgroundColor = '#dbeafe',
   disabled = false,
   onClick,
   onClickCapture,

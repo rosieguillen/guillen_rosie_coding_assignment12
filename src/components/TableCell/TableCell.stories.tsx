@@ -1,25 +1,24 @@
-
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { TableCell } from "./TableCell";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { TableCell } from './TableCell';
 
 const meta = {
-  title: "Components/TableCell",
+  title: 'Components/TableCell',
   component: TableCell,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
-    children: { control: "text" },
-    header: { control: "boolean" },
-    backgroundColor: { control: "color" },
-    disabled: { control: "boolean" },
+    children: { control: 'text' },
+    header: { control: 'boolean' },
+    backgroundColor: { control: 'color' },
+    disabled: { control: 'boolean' },
   },
   args: {
-    children: "Example cell",
+    children: 'Example cell',
     header: false,
-    backgroundColor: "#ffffff",
+    backgroundColor: '#ffffff',
     disabled: false,
   },
   render: (args) => (
-    <table style={{ width: "100%", borderCollapse: "collapse" }}>
+    <table style={{ width: '100%', borderCollapse: 'collapse' }}>
       <tbody>
         <tr>
           <TableCell {...args} />
@@ -43,7 +42,7 @@ export const Disabled: Story = {
 
 export const Header: Story = {
   args: {
-    children: "Component",
+    children: 'Component',
     header: true,
   },
 };

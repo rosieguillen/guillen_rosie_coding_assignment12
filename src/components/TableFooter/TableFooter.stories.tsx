@@ -1,23 +1,21 @@
-
-
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { TableFooter } from "./TableFooter";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { TableFooter } from './TableFooter';
 
 const meta = {
-  title: "Components/TableFooter",
+  title: 'Components/TableFooter',
   component: TableFooter,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
-    backgroundColor: { control: "color" },
-    disabled: { control: "boolean" },
+    backgroundColor: { control: 'color' },
+    disabled: { control: 'boolean' },
     children: { control: false },
   },
   args: {
-    backgroundColor: "#f3f4f6",
+    backgroundColor: '#f3f4f6',
     disabled: false,
   },
   render: (args) => (
-    <table style={{ width: "100%", borderCollapse: "collapse" }}>
+    <table style={{ width: '100%', borderCollapse: 'collapse' }}>
       <thead>
         <tr>
           <th scope="col">Component</th>

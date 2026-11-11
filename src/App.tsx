@@ -1,19 +1,19 @@
-import { useState } from "react";
-import styled from "styled-components";
+import { useState } from 'react';
+import styled from 'styled-components';
 
-import { Button } from "./components/button/Button";
-import { Label } from "./components/labels/Label";
-import { Text } from "./components/Text/Text";
-import { Dropdown } from "./components/dropdown/Dropdown";
-import { RadioButton } from "./components/RadioButton/RadioButton";
-import { Img } from "./components/Img/Img";
-import { HeroImage } from "./components/HeroImage/HeroImage";
-import { Card } from "./components/Card/Card";
-import { Table } from "./components/Table/Table";
-import { TableHeader } from "./components/TableHeader/TableHeader";
-import { TableRow } from "./components/TableRow/TableRow";
-import { TableCell } from "./components/TableCell/TableCell";
-import { TableFooter } from "./components/TableFooter/TableFooter";
+import { Button } from './components/button/Button';
+import { Label } from './components/labels/Label';
+import { Text } from './components/Text/Text';
+import { Dropdown } from './components/dropdown/Dropdown';
+import { RadioButton } from './components/RadioButton/RadioButton';
+import { Img } from './components/Img/Img';
+import { HeroImage } from './components/HeroImage/HeroImage';
+import { Card } from './components/Card/Card';
+import { Table } from './components/Table/Table';
+import { TableHeader } from './components/TableHeader/TableHeader';
+import { TableRow } from './components/TableRow/TableRow';
+import { TableCell } from './components/TableCell/TableCell';
+import { TableFooter } from './components/TableFooter/TableFooter';
 
 const Page = styled.main`
   max-width: 760px;
@@ -58,12 +58,16 @@ const Toggle = styled.label`
 `;
 
 const BannerExample = styled.div`
-  img { height: 140px; }
-  h2 { font-size: 1.4rem; }
+  img {
+    height: 140px;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
 `;
 
 const sampleImage =
-  "data:image/svg+xml," +
+  'data:image/svg+xml,' +
   encodeURIComponent(`
     <svg xmlns="http://www.w3.org/2000/svg"
          width="1200" height="400" viewBox="0 0 1200 400">
@@ -74,13 +78,13 @@ const sampleImage =
     </svg>
   `);
 
-const componentNames = ["Button", "Dropdown", "Card"];
+const componentNames = ['Button', 'Dropdown', 'Card'];
 
 function App() {
   const [disabled, setDisabled] = useState(false);
   const [clicks, setClicks] = useState(0);
-  const [fruit, setFruit] = useState("apple");
-  const [delivery, setDelivery] = useState("standard");
+  const [fruit, setFruit] = useState('apple');
+  const [delivery, setDelivery] = useState('standard');
 
   return (
     <Page>
@@ -97,14 +101,13 @@ function App() {
       </Toggle>
 
       <BannerExample>
-      <HeroImage
-        src={sampleImage}
-        alt="Green mountains beneath a sunny sky"
-        heading="Hero Image"
-        description="A simple image banner."
-        disabled={disabled}
-      />
-
+        <HeroImage
+          src={sampleImage}
+          alt="Green mountains beneath a sunny sky"
+          heading="Hero Image"
+          description="A simple image banner."
+          disabled={disabled}
+        />
       </BannerExample>
 
       <Section aria-labelledby="controls-heading">
@@ -121,26 +124,20 @@ function App() {
           </Stack>
 
           <Stack>
-            <Label
-              text="Choose a fruit"
-              htmlFor="fruit"
-              disabled={disabled}
-            />
+            <Label text="Choose a fruit" htmlFor="fruit" disabled={disabled} />
 
             <Dropdown
               id="fruit"
               aria-label="Choose a fruit"
               options={[
-                { value: "apple", label: "Apple" },
-                { value: "banana", label: "Banana" },
-                { value: "orange", label: "Orange" },
+                { value: 'apple', label: 'Apple' },
+                { value: 'banana', label: 'Banana' },
+                { value: 'orange', label: 'Orange' },
               ]}
               value={fruit}
               onChange={(event) => setFruit(event.target.value)}
               disabled={disabled}
             />
-
-
           </Stack>
 
           <Stack role="group" aria-label="Delivery options">
@@ -148,8 +145,8 @@ function App() {
               label="Standard delivery"
               name="delivery"
               value="standard"
-              checked={delivery === "standard"}
-              onChange={() => setDelivery("standard")}
+              checked={delivery === 'standard'}
+              onChange={() => setDelivery('standard')}
               disabled={disabled}
             />
 
@@ -157,12 +154,10 @@ function App() {
               label="Express delivery"
               name="delivery"
               value="express"
-              checked={delivery === "express"}
-              onChange={() => setDelivery("express")}
+              checked={delivery === 'express'}
+              onChange={() => setDelivery('express')}
               disabled={disabled}
             />
-
-
           </Stack>
         </Grid>
       </Section>

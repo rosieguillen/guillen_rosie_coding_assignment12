@@ -1,22 +1,20 @@
-
-
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { RadioButton } from "./RadioButton";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { RadioButton } from './RadioButton';
 
 const meta = {
-  title: "Components/RadioButton",
+  title: 'Components/RadioButton',
   component: RadioButton,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
-    label: { control: "text" },
-    backgroundColor: { control: "color" },
-    disabled: { control: "boolean" },
+    label: { control: 'text' },
+    backgroundColor: { control: 'color' },
+    disabled: { control: 'boolean' },
   },
   args: {
-    label: "Standard delivery",
-    name: "delivery",
-    value: "standard",
-    backgroundColor: "#ffffff",
+    label: 'Standard delivery',
+    name: 'delivery',
+    value: 'standard',
+    backgroundColor: '#ffffff',
     disabled: false,
   },
 } satisfies Meta<typeof RadioButton>;
@@ -38,7 +36,7 @@ export const Group: Story = {
     <div
       role="group"
       aria-label="Delivery options"
-      style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}
+      style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}
     >
       <RadioButton
         {...args}

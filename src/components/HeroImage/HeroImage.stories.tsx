@@ -1,10 +1,8 @@
-
-
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { HeroImage } from "./HeroImage";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { HeroImage } from './HeroImage';
 
 const sampleImage =
-  "data:image/svg+xml," +
+  'data:image/svg+xml,' +
   encodeURIComponent(`
     <svg xmlns="http://www.w3.org/2000/svg"
          width="1200" height="400" viewBox="0 0 1200 400">
@@ -16,23 +14,23 @@ const sampleImage =
   `);
 
 const meta = {
-  title: "Components/HeroImage",
+  title: 'Components/HeroImage',
   component: HeroImage,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
-    src: { control: "text" },
-    alt: { control: "text" },
-    heading: { control: "text" },
-    description: { control: "text" },
-    backgroundColor: { control: "color" },
-    disabled: { control: "boolean" },
+    src: { control: 'text' },
+    alt: { control: 'text' },
+    heading: { control: 'text' },
+    description: { control: 'text' },
+    backgroundColor: { control: 'color' },
+    disabled: { control: 'boolean' },
   },
   args: {
     src: sampleImage,
-    alt: "Illustration of mountains beneath a sunny sky",
+    alt: 'Illustration of mountains beneath a sunny sky',
     heading: "Welcome to Rosie's UI Garden",
-    description: "Explore a collection of reusable React components.",
-    backgroundColor: "#eff6ff",
+    description: 'Explore a collection of reusable React components.',
+    backgroundColor: '#eff6ff',
     disabled: false,
   },
 } satisfies Meta<typeof HeroImage>;

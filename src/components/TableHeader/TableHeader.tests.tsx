@@ -1,8 +1,6 @@
-
-
-import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
-import { TableHeader } from "./TableHeader";
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { TableHeader } from './TableHeader';
 
 const content = (
   <tr>
@@ -11,41 +9,37 @@ const content = (
   </tr>
 );
 
-test("the table header is visible", () => {
+test('the table header is visible', () => {
   render(
     <table>
       <TableHeader>{content}</TableHeader>
-    </table>
+    </table>,
   );
 
-  expect(screen.getByRole("rowgroup")).toBeVisible();
+  expect(screen.getByRole('rowgroup')).toBeVisible();
 
-  expect(
-    screen.getByRole("columnheader", { name: "Component" })
-  ).toBeVisible();
+  expect(screen.getByRole('columnheader', { name: 'Component' })).toBeVisible();
 });
 
-test("the background changes when disabled", () => {
+test('the background changes when disabled', () => {
   const { rerender } = render(
     <table>
-      <TableHeader backgroundColor="#dbeafe">
-        {content}
-      </TableHeader>
-    </table>
+      <TableHeader backgroundColor="#dbeafe">{content}</TableHeader>
+    </table>,
   );
 
-  const header = screen.getByRole("rowgroup");
+  const header = screen.getByRole('rowgroup');
 
-  expect(header).toHaveStyle("background-color: #dbeafe");
+  expect(header).toHaveStyle('background-color: #dbeafe');
 
   rerender(
     <table>
       <TableHeader backgroundColor="#dbeafe" disabled>
         {content}
       </TableHeader>
-    </table>
+    </table>,
   );
 
-  expect(header).toHaveAttribute("aria-disabled", "true");
-  expect(header).toHaveStyle("background-color: #d1d5db");
+  expect(header).toHaveAttribute('aria-disabled', 'true');
+  expect(header).toHaveStyle('background-color: #d1d5db');
 });

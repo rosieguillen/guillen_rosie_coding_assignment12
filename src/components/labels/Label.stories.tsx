@@ -1,20 +1,19 @@
-
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { Label } from "./Label";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { Label } from './Label';
 
 const meta = {
-  title: "Components/Label",
+  title: 'Components/Label',
   component: Label,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
-    text: { control: "text" },
-    backgroundColor: { control: "color" },
-    disabled: { control: "boolean" },
-    htmlFor: { control: "text" },
+    text: { control: 'text' },
+    backgroundColor: { control: 'color' },
+    disabled: { control: 'boolean' },
+    htmlFor: { control: 'text' },
   },
   args: {
-    text: "Email address",
-    backgroundColor: "#eff6ff",
+    text: 'Email address',
+    backgroundColor: '#eff6ff',
     disabled: false,
   },
 } satisfies Meta<typeof Label>;

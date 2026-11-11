@@ -1,7 +1,7 @@
-import type { HTMLAttributes } from "react";
+import type { HTMLAttributes } from 'react';
 
 export interface TableHeaderProps
-    extends HTMLAttributes<HTMLTableSectionElement> {
-    backgroundColor?: string;
-    disabled?: boolean;
+  extends HTMLAttributes<HTMLTableSectionElement> {
+  backgroundColor?: string;
+  disabled?: boolean;
 }

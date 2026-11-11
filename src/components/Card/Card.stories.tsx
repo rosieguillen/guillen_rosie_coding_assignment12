@@ -1,23 +1,20 @@
-
-
-import type { Meta, StoryObj } from "@storybook/react-webpack5";
-import { Card } from "./Card";
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
+import { Card } from './Card';
 
 const meta = {
-  title: "Components/Card",
+  title: 'Components/Card',
   component: Card,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   argTypes: {
-    heading: { control: "text" },
-    description: { control: "text" },
-    backgroundColor: { control: "color" },
-    disabled: { control: "boolean" },
+    heading: { control: 'text' },
+    description: { control: 'text' },
+    backgroundColor: { control: 'color' },
+    disabled: { control: 'boolean' },
   },
   args: {
-    heading: "Reusable components",
-    description:
-      "Build consistent interfaces with Rosie's UI Garden.",
-    backgroundColor: "#ffffff",
+    heading: 'Reusable components',
+    description: "Build consistent interfaces with Rosie's UI Garden.",
+    backgroundColor: '#ffffff',
     disabled: false,
   },
 } satisfies Meta<typeof Card>;

@@ -1,7 +1,5 @@
-
-
-import styled from "styled-components";
-import type { DropdownProps } from "./Dropdown.types";
+import styled from 'styled-components';
+import type { DropdownProps } from './Dropdown.types';
 
 const StyledSelect = styled.select<{
   $backgroundColor: string;
@@ -38,7 +36,7 @@ const StyledSelect = styled.select<{
 
 export const Dropdown = ({
   options,
-  backgroundColor = "#ffffff",
+  backgroundColor = '#ffffff',
   disabled = false,
   ...props
 }: DropdownProps) => (

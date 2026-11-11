@@ -1,8 +1,6 @@
-
-
-import styled from "styled-components";
-import type { TableProps } from "./Table.types";
-import type { MouseEvent } from "react";
+import styled from 'styled-components';
+import type { TableProps } from './Table.types';
+import type { MouseEvent } from 'react';
 
 const ScrollContainer = styled.div`
   width: 100%;
@@ -21,13 +19,11 @@ const StyledTable = styled.table<{
   line-height: 1.5;
 
   background-color: ${({ $disabled, $backgroundColor }) =>
-    $disabled ? "#d1d5db" : $backgroundColor};
+    $disabled ? '#d1d5db' : $backgroundColor};
 
-  color: ${({ $disabled }) =>
-    $disabled ? "#4b5563" : "#111827"};
+  color: ${({ $disabled }) => ($disabled ? '#4b5563' : '#111827')};
 
-  cursor: ${({ $disabled }) =>
-    $disabled ? "not-allowed" : "auto"};
+  cursor: ${({ $disabled }) => ($disabled ? 'not-allowed' : 'auto')};
 
   th,
   td {
@@ -49,7 +45,7 @@ const StyledTable = styled.table<{
 
 export const Table = ({
   children,
-  backgroundColor = "#ffffff",
+  backgroundColor = '#ffffff',
   disabled = false,
   onClick,
   ...props

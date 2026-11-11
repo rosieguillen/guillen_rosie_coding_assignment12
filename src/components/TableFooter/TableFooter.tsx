@@ -1,23 +1,20 @@
-
-import styled from "styled-components";
-import type { TableFooterProps } from "./TableFooter.types";
-import type { MouseEvent } from "react";
+import styled from 'styled-components';
+import type { TableFooterProps } from './TableFooter.types';
+import type { MouseEvent } from 'react';
 
 const StyledFooter = styled.tfoot<{
   $backgroundColor: string;
   $disabled: boolean;
 }>`
   background-color: ${({ $disabled, $backgroundColor }) =>
-    $disabled ? "#d1d5db" : $backgroundColor};
+    $disabled ? '#d1d5db' : $backgroundColor};
 
-  color: ${({ $disabled }) =>
-    $disabled ? "#4b5563" : "#111827"};
+  color: ${({ $disabled }) => ($disabled ? '#4b5563' : '#111827')};
 
   font-family: inherit;
   font-weight: 600;
 
-  cursor: ${({ $disabled }) =>
-    $disabled ? "not-allowed" : "inherit"};
+  cursor: ${({ $disabled }) => ($disabled ? 'not-allowed' : 'inherit')};
 
   td,
   th {
@@ -36,7 +33,7 @@ const StyledFooter = styled.tfoot<{
 
 export const TableFooter = ({
   children,
-  backgroundColor = "#f3f4f6",
+  backgroundColor = '#f3f4f6',
   disabled = false,
   onClick,
   onClickCapture,

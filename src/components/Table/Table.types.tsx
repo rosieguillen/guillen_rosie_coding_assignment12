@@ -1,9 +1,6 @@
+import type { TableHTMLAttributes } from 'react';
 
-
-import type { TableHTMLAttributes } from "react";
-
-export interface TableProps
-    extends TableHTMLAttributes<HTMLTableElement> {
-    backgroundColor?: string;
-    disabled?: boolean;
+export interface TableProps extends TableHTMLAttributes<HTMLTableElement> {
+  backgroundColor?: string;
+  disabled?: boolean;
 }
